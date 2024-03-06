@@ -126,7 +126,7 @@
        boolean))
 
 (defmacro ^:private def-MockConnection []
-  `(defrecord ~'MockConnection
+  `(deftype ~'MockConnection
      ~'[a_state,                                               ;; an atom, holding a MockConnState
         forkT,                                                 ;; the basis-t of the starting-point db / connection at the time of forking
         originLog,                                             ;; a Log Value of the origin connection, taken _after_ derefing its db
